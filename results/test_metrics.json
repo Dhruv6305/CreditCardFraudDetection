@@ -1,0 +1,96 @@
+{
+  "model": "xgb_d5",
+  "cost_fn": 100.0,
+  "cost_fp": 5.0,
+  "test": {
+    "threshold": 0.05426279455423355,
+    "tp": 39,
+    "fp": 33,
+    "fn": 13,
+    "tn": 42474,
+    "precision": 0.5416666666666666,
+    "recall": 0.75,
+    "f1": 0.6290322580645162,
+    "alarms_per_1000": 1.6917690735214643,
+    "cost": 1465.0,
+    "cost_flag_nothing": 5200.0,
+    "saving_pct": 71.82692307692308,
+    "pr_auc": 0.7720666922043983,
+    "recall_at_p50": 0.75,
+    "test_rows": 42559,
+    "test_fraud": 52
+  },
+  "rule_baseline": {
+    "threshold": 0.5,
+    "tp": 20,
+    "fp": 4992,
+    "fn": 32,
+    "tn": 37515,
+    "precision": 0.0039904229848363925,
+    "recall": 0.38461538461538464,
+    "f1": 0.007898894154818327,
+    "alarms_per_1000": 117.76592495124416,
+    "cost": 28160.0,
+    "cost_flag_nothing": 5200.0,
+    "saving_pct": -441.53846153846155,
+    "pr_auc": 0.00228667543710046
+  },
+  "cv_summary": [
+    {
+      "model": "xgb_d5",
+      "mean_pr_auc": 0.7807,
+      "std_pr_auc": 0.0711,
+      "mean_recall_p50": 0.8259
+    },
+    {
+      "model": "xgb_d3",
+      "mean_pr_auc": 0.7807,
+      "std_pr_auc": 0.064,
+      "mean_recall_p50": 0.8211
+    },
+    {
+      "model": "rf",
+      "mean_pr_auc": 0.7687,
+      "std_pr_auc": 0.083,
+      "mean_recall_p50": 0.8211
+    },
+    {
+      "model": "logreg",
+      "mean_pr_auc": 0.7202,
+      "std_pr_auc": 0.1182,
+      "mean_recall_p50": 0.7976
+    },
+    {
+      "model": "rule_amount_le_1",
+      "mean_pr_auc": 0.0021,
+      "std_pr_auc": 0.0013,
+      "mean_recall_p50": 0.0
+    }
+  ],
+  "sensitivity_oof": [
+    {
+      "cost_ratio": "5:1",
+      "threshold": 0.15586310625076294,
+      "recall": 0.8177777777777778,
+      "precision": 0.7272727272727273,
+      "alarms_per_1000": 1.5736179529282976,
+      "saving_pct": 75.64444444444445
+    },
+    {
+      "cost_ratio": "20:1",
+      "threshold": 0.05426279455423355,
+      "recall": 0.84,
+      "precision": 0.5851393188854489,
+      "alarms_per_1000": 2.009006319351147,
+      "saving_pct": 81.02222222222223
+    },
+    {
+      "cost_ratio": "100:1",
+      "threshold": 0.010113227181136608,
+      "recall": 0.8622222222222222,
+      "precision": 0.304552590266876,
+      "alarms_per_1000": 3.9620341344479275,
+      "saving_pct": 84.25333333333333
+    }
+  ]
+}
